@@ -23,6 +23,7 @@ class CategoriesScreen extends StatelessWidget {
         ),
         children: Categories_data.map(
           (categoryData) => CategoryItem(
+            id: categoryData.id,
             title: categoryData.title,
             imageUrl: categoryData.imageUrl,
           ),

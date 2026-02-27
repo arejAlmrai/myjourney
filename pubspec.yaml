@@ -78,7 +78,7 @@ flutter:
   fonts:
     - family: CascadiaMono
       fonts:
-        # - asset: asset/fonts/CascadiaMono-Light.ttf
+        - asset: asset/fonts/CascadiaMono-Light.ttf
         - asset: assets/fonts/CascadiaMono-Regular.ttf
         - asset: assets/fonts/CascadiaMono-SemiBold.ttf
           weight: 600

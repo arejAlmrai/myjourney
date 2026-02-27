@@ -10,7 +10,7 @@ class CaregoryTripsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('صفحة الرحلات '),
+        title: Text(categoryTitle!),
       ),
       body: const Center(
         child: Text('قائمة  برحلات هذا التصنيف'),
