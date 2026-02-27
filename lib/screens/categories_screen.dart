@@ -11,7 +11,7 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('دليل سياحي', textAlign: TextAlign.end),
-        backgroundColor: Colors.blue,
+        // backgroundColor: Colors.blue,
       ),
       body: GridView(
         padding: const EdgeInsets.all(10),
