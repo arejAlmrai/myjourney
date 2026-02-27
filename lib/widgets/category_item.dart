@@ -4,18 +4,17 @@ import 'package:travel_app/screens/caregory_trips_screen.dart';
 import 'package:travel_app/screens/categories_screen.dart';
 
 class CategoryItem extends StatelessWidget {
-  final String? id;
-  final String? title;
-  final String? imageUrl;
-  CategoryItem({super.key, this.title, this.imageUrl, this.id});
-
+  final String id;
+  final String title;
+  final String imageUrl;
+  CategoryItem({super.key,required this.title,required this.imageUrl, required this.id});
+ 
   void selectCategory(BuildContext ctx) {
-    Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => CaregoryTripsScreen(categoryId: id, categoryTitle: title)));
-    
-    @override
-    Widget build(BuildContext context) {
-      return Container();
-    }
+    Navigator.of(ctx).pushNamed('/category_trip',arguments:{
+      "id":id,
+      "title":title
+    });
+   
   }
 
   @override
@@ -23,7 +22,7 @@ class CategoryItem extends StatelessWidget {
     return InkWell
     (
 
-      onTap: () {},
+      onTap: ()=> selectCategory( context),
       splashColor: Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(15),
       child: Stack(            
@@ -32,7 +31,7 @@ class CategoryItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
       
             child: Image.network(
-              imageUrl!,
+              imageUrl,
               fit: BoxFit.cover,
       
               width: double.infinity,
@@ -45,7 +44,7 @@ class CategoryItem extends StatelessWidget {
             alignment: Alignment.center,
       
             child: Text(
-              title!,
+              title,
               style: const TextStyle(
                 fontSize: 20,
                 color: Colors.white,
