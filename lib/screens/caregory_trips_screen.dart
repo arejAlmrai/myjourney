@@ -8,8 +8,12 @@ class CaregoryTripsScreen extends StatelessWidget {
     final categoryId = routeArgument?['id'] ;
     final categoryTitle = routeArgument?['title'] ;
     return Scaffold(
-      appBar: AppBar(title: Text(categoryTitle ?? 'رحلات'),),
-      body: const Center(child: Text('قائمة  برحلات هذا التصنيف')),
+      appBar: AppBar(
+        title: const Text('صفحة الرحلات '),
+      ),
+      body: const Center(
+        child: Text('قائمة  برحلات هذا التصنيف'),
+      ),
     );
   }
 }
