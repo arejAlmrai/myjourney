@@ -6,10 +6,10 @@ enum TripType { Exploration, Recovery, Activities, Therapy }
 
 class Trip {
   final String id;
-  final List<String> catigories;
+  final List<String>  categories;
   final String title;
-  final String inageUrl;
-  final List<String> activities;
+  final String imageUrl;
+  final List<String>  activities;
   final List<String> program;
   final int duration;
   final Season season;
@@ -18,18 +18,21 @@ class Trip {
   final bool isInWinter;
   final bool isForFamilies;
 
+
+
+ 
   Trip({
     required this.id,
-    required this.catigories,
+    required this.categories,
     required this.title,
-    required this.inageUrl,
+    required this.imageUrl,
     required this.activities,
     required this.program,
     required this.duration,
     required this.season,
     required this.tripType,
     required this.isInSummer,
-    required this.isInWinter,
-    required this.isForFamilies, required List<String> categories, required String imageUrl,
-  });
+   
+    required this.isForFamilies,
+     required this.isInWinter, });
 }

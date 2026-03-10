@@ -127,9 +127,9 @@ final Trips_data =  [
     ],
     isInSummer: false,
     isForFamilies: false,
-    isInWinter: true, catigories: [], inageUrl: '',
+    isInWinter: true, 
   ),
-  const Trip(
+ Trip(
     id: 'm4',
     categories: [
       'c2',
@@ -158,7 +158,7 @@ final Trips_data =  [
     isForFamilies: false,
     isInWinter: false,
   ),
-  const Trip(
+Trip(
     id: 'm5',
     categories: [
       'c2',
@@ -187,7 +187,7 @@ final Trips_data =  [
     isForFamilies: false,
     isInWinter: true,
   ),
-  const Trip(
+  Trip(
     id: 'm6',
     categories: [
       'c2',
@@ -215,7 +215,7 @@ final Trips_data =  [
     isForFamilies: false,
     isInWinter: false,
   ),
-  const Trip(
+   Trip(
     id: 'm7',
     categories: [
       'c3',
@@ -243,7 +243,7 @@ final Trips_data =  [
     isForFamilies: false,
     isInWinter: false,
   ),
-  const Trip(
+   Trip(
     id: 'm8',
     categories: [
       'c3',
@@ -271,7 +271,7 @@ final Trips_data =  [
     isForFamilies: false,
     isInWinter: true,
   ),
-  const Trip(
+   Trip(
     id: 'm9',
     categories: [
       'c3',
@@ -299,7 +299,7 @@ final Trips_data =  [
     isForFamilies: false,
     isInWinter: false,
   ),
-  const Trip(
+ Trip(
     id: 'm10',
     categories: [
       'c4',
@@ -327,7 +327,7 @@ final Trips_data =  [
     isForFamilies: true,
     isInWinter: true,
   ),
-  const Trip(
+   Trip(
     id: 'm11',
     categories: [
       'c4',
@@ -356,7 +356,7 @@ final Trips_data =  [
     isForFamilies: true,
     isInWinter: true,
   ),
-  const Trip(
+   Trip(
     id: 'm12',
     categories: [
       'c4',
@@ -384,7 +384,7 @@ final Trips_data =  [
     isForFamilies: true,
     isInWinter: true,
   ),
-  const Trip(
+   Trip(
     id: 'm13',
     categories: [
       'c5',
@@ -412,7 +412,7 @@ final Trips_data =  [
     isForFamilies: true,
     isInWinter: true,
   ),
-  const Trip(
+   Trip(
     id: 'm14',
     categories: [
       'c5',
@@ -440,7 +440,7 @@ final Trips_data =  [
     isForFamilies: true,
     isInWinter: true,
   ),
-  const Trip(
+  Trip(
     id: 'm15',
     categories: [
       'c5',
@@ -468,7 +468,7 @@ final Trips_data =  [
     isForFamilies: true,
     isInWinter: true,
   ),
-  const Trip(
+   Trip(
     id: 'm16',
     categories: [
       'c6',
@@ -496,7 +496,7 @@ final Trips_data =  [
     isForFamilies: true,
     isInWinter: true,
   ),
-  const Trip(
+   Trip(
     id: 'm17',
     categories: [
       'c6',
