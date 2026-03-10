@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/widgets/app_data.dart';
 import 'package:travel_app/widgets/category_item.dart';
-import '../app_data.dart';
+import '../app_data.dart' hide Categories_data;
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});

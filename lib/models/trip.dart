@@ -30,6 +30,6 @@ class Trip {
     required this.tripType,
     required this.isInSummer,
     required this.isInWinter,
-    required this.isForFamilies,
+    required this.isForFamilies, required List<String> categories, required String imageUrl,
   });
 }
