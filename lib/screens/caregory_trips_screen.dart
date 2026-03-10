@@ -11,9 +11,14 @@ class CaregoryTripsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('صفحة الرحلات '),
       ),
-      body: const Center(
-        child: Text('قائمة  برحلات هذا التصنيف'),
+      body: ListView.builder(itemBuilder: (ctx,index){
+        return
+      }
+      
+      itemCount: ,
+      
       ),
+    
     );
   }
 }

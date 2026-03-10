@@ -19,11 +19,10 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: [
-      
         Locale('en'), // English
-          Locale('ar'), // Arabic
+        Locale('ar'), // Arabic
       ],
-        locale: Locale('ar'), // اللغة الافتراضية
+      locale: Locale('ar'), // اللغة الافتراضية
 
       debugShowCheckedModeBanner: false,
       title: 'Travel App',
@@ -34,8 +33,11 @@ class MyApp extends StatelessWidget {
           headlineSmall: TextStyle(color: Colors.black),
         ),
       ),
-      home: const CategoriesScreen(),
-      routes: {'/category_trip':(ctx)=>CaregoryTripsScreen()},
+      // home: const CategoriesScreen(),
+      routes: {
+        '/': (ctx) => CategoriesScreen(),
+        '/category_trip': (ctx) => CaregoryTripsScreen(),
+      },
     );
   }
 }
