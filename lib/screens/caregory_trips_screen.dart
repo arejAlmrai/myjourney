@@ -17,6 +17,7 @@ class CaregoryTripsScreen extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return TripItem(
+            id: filteredTrips[index].id,
             title: filteredTrips[index].title,
             imageUrl: filteredTrips[index].imageUrl,
             duration: filteredTrips[index].duration,
