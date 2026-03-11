@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'CascadiaMono',
         textTheme: ThemeData.light().textTheme.copyWith(
-          headlineSmall: TextStyle(color: Colors.black),
+          headlineSmall: TextStyle(color: const Color.fromARGB(255, 252, 251, 251),fontSize: 24, fontWeight: FontWeight.bold,fontFamily: 'CascadiaMono'),
         ),
       ),
       // home: const CategoriesScreen(),
