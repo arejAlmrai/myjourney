@@ -18,7 +18,10 @@ class _TapsScreensState extends State<TapsScreens> {
 
   int _selectedScreenindex = 0;
 
-  final List<Widget> _screen = [CategoriesScreen(), FavoritesScreen()];
+  final List<Map<String, Object>> _screen = [
+    {"Screen": CategoriesScreen(), "Title": "التصنيفات"},
+    {"Screen": FavoritesScreen(), "Title": "المفضلة"},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +29,13 @@ class _TapsScreensState extends State<TapsScreens> {
       appBar: AppBar(
         title: Center(
           child: Text(
-            "دليل سياحي",
+            _screen[_selectedScreenindex]['Title'] as String,
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
         backgroundColor: Colors.blue,
       ),
-      body: _screen[_selectedScreenindex],
+
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue,
         selectedItemColor: Colors.amber,
@@ -51,6 +54,7 @@ class _TapsScreensState extends State<TapsScreens> {
           ),
         ],
       ),
+      body: _screen[_selectedScreenindex]['Screen'] as Widget,
     );
   }
 }
