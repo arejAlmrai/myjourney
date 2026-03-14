@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/screens/categories_screen.dart';
 import 'package:travel_app/screens/favorites_screen.dart';
+import 'package:travel_app/widgets/app_drawer.dart';
 
 class TapsScreens extends StatefulWidget {
   const TapsScreens({super.key});
@@ -26,6 +27,7 @@ class _TapsScreensState extends State<TapsScreens> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: Center(
           child: Text(
