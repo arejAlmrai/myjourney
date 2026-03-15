@@ -33,7 +33,7 @@ class TripDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tripId = ModalRoute.of(context)?.settings.arguments as String;
-    final selectedTrip = Trips_data.firstWhere((trip) => trip.id == trip.id);
+    final selectedTrip = Trips_data.firstWhere((trip) => trip.id == tripId);
 
     return Scaffold(
       appBar: AppBar(title: Text('${selectedTrip.title}')),
@@ -81,6 +81,15 @@ class TripDetailScreen extends StatelessWidget {
             SizedBox(height: 100),
           ],
         ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.amber,
+        onPressed: () {
+          Navigator.of(context).pop(tripId);
+        },
+        child: Icon(Icons.delete), 
+      
       ),
     );
   }

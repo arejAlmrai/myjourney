@@ -19,13 +19,13 @@ class _FiltersScreensState extends State<FiltersScreens> {
     String title,
     String subtitle,
     var currentValue,
-    Function updateValue,
+    Function(bool)   updateValue,
   ) {
     return SwitchListTile(
       title: Text(title),
       subtitle: Text(subtitle),
       value: currentValue,
-      onChanged: updateValue(),
+      onChanged: updateValue,
     );
   }
 

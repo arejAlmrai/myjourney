@@ -9,6 +9,7 @@ class TripItem extends StatelessWidget {
   final int duration;
   final TripType tripType;
   final Season season;
+  final Function(String) removeItem;
   const TripItem({
     super.key,
     required this.id,
@@ -17,24 +18,25 @@ class TripItem extends StatelessWidget {
     required this.duration,
     required this.tripType,
     required this.season,
+    required this.removeItem,
   });
 
   String get seasonText {
     switch (season) {
       case Season.Winter:
         return 'شتاء';
-        break;
+        // break;
       case Season.Spring:
         return 'ربيع';
-        break;
+        // break;
       case Season.Summer:
         return 'صيف';
-        break;
+        // break;
       case Season.Autumn:
         return 'خريف';
-        break;
-      default:
-        return 'غير معروف';
+        // break;
+      // default:
+        // return 'غير معروف';
     }
   }
 
@@ -42,25 +44,29 @@ class TripItem extends StatelessWidget {
     switch (tripType) {
       case TripType.Exploration:
         return 'استكشاف';
-        break;
+      // break;
       case TripType.Recovery:
         return 'نقاهة';
-        break;
+      // break;
       case TripType.Activities:
         return 'أنشطة';
-        break;
+      // break;
       case TripType.Therapy:
         return 'معالجة';
-        break;
-      default:
-        return 'غير معروف';
+      // break;
+      // default:
+      //   return 'غير معروف';
     }
   }
 
   void selectTrip(BuildContext context) {
     Navigator.of(
       context,
-    ).pushNamed(TripDetailScreen.screenRoute, arguments: id);
+    ).pushNamed(TripDetailScreen.screenRoute, arguments: id).then((result) {
+      if (result != null) {
+        removeItem(result as String);
+      }
+    });
   }
 
   @override
