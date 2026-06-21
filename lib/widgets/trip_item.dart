@@ -9,7 +9,7 @@ class TripItem extends StatelessWidget {
   final int duration;
   final TripType tripType;
   final Season season;
-  final Function(String) removeItem;
+  // final Function(String) removeItem;
   const TripItem({
     super.key,
     required this.id,
@@ -18,7 +18,7 @@ class TripItem extends StatelessWidget {
     required this.duration,
     required this.tripType,
     required this.season,
-    required this.removeItem,
+    // required this.removeItem,
   });
 
   String get seasonText {
@@ -64,7 +64,7 @@ class TripItem extends StatelessWidget {
       context,
     ).pushNamed(TripDetailScreen.screenRoute, arguments: id).then((result) {
       if (result != null) {
-        removeItem(result as String);
+        // removeItem(result as String);
       }
     });
   }

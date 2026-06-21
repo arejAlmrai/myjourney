@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:travel_app/app_data.dart';
 
 class TripDetailScreen extends StatelessWidget {
-  const TripDetailScreen({super.key});
+  TripDetailScreen(this.manageFavorite, this.isFovarite
+  );
   static const screenRoute = '/trip_detail';
+    final Function(String) manageFavorite;
+
+
+ final bool Function(String) isFovarite;
   Widget buildSectionTitle(BuildContext context, String titleText) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -85,11 +90,8 @@ class TripDetailScreen extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.amber,
-        onPressed: () {
-          Navigator.of(context).pop(tripId);
-        },
-        child: Icon(Icons.delete), 
-      
+        onPressed: () => manageFavorite(tripId),
+        child: Icon(isFovarite(tripId) ? Icons.star : Icons.star_border),
       ),
     );
   }

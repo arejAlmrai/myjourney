@@ -3,12 +3,17 @@ import 'package:travel_app/app_data.dart';
 import 'package:travel_app/models/trip.dart';
 import 'package:travel_app/widgets/trip_item.dart';
 
-class CaregoryTripsScreen extends StatefulWidget {
+class CategoryTripsScreen extends StatefulWidget {
+  static const screenRoute = '/category_trip';
+ List<Trip>  availableTrips=[];
+
+ CategoryTripsScreen(this.availableTrips, {super.key});
+
   @override
-  State<CaregoryTripsScreen> createState() => _CaregoryTripsScreenState();
+  State<CategoryTripsScreen> createState() => _CategoryTripsScreenState();
 }
 
-class _CaregoryTripsScreenState extends State<CaregoryTripsScreen> {
+class _CategoryTripsScreenState extends State<CategoryTripsScreen> {
   String? categoryTitle;
   List<Trip> displayTrips = [];
   @override
@@ -19,15 +24,15 @@ class _CaregoryTripsScreenState extends State<CaregoryTripsScreen> {
   bool _loadedInitData = false;
   @override
   void didChangeDependencies() {
-   if(!_loadedInitData){
-     final routeArgument =
-        ModalRoute.of(context)!.settings.arguments as Map<String, String>?;
-    final categoryId = routeArgument?['id'];
-    categoryTitle = routeArgument?['title'];
-    displayTrips = Trips_data.where((trip) {
-      return trip.categories.contains(categoryId);
-    }).toList();
-   }
+    if (!_loadedInitData) {
+      final routeArgument =
+          ModalRoute.of(context)!.settings.arguments as Map<String, String>?;
+      final categoryId = routeArgument?['id'];
+      categoryTitle = routeArgument?['title'];
+      displayTrips = widget. availableTrips.where((trip) {
+        return trip.categories.contains(categoryId);
+      }).toList();
+    }
     _loadedInitData = true;
     super.didChangeDependencies();
   }
@@ -51,7 +56,7 @@ class _CaregoryTripsScreenState extends State<CaregoryTripsScreen> {
             duration: displayTrips[index].duration,
             tripType: displayTrips[index].tripType,
             season: displayTrips[index].season,
-            removeItem: _removeTrip,
+            // removeItem: _removeTrip,
           );
         },
 
